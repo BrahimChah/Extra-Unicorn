@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans&display=swap');
+:root {
+    --black: #181818;
+    --white: #ffffff;
+    --gray: #eeeeee;
+    --gray-light: #fbfbfb;
+    --font-body: 'PT Sans', sans-serif;
+    --font-title: 'Libre Baskerville', serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    background-color: var(--gray-light);
+}
+
+
+.container {
+    width: unset;
+    margin: unset;
+}
+.section1 {
+    padding: 30% 0;
+    text-align: center;
+}
+
+.section1 h1 {
+    font-size: 2em;
+    font-family: var(--font-title);
+}
+.section1 p {
+    font-size: 0.8em;
+}
+
+.header { /* Va placer le hamburger en haut à droite */
+    display: flex;
+    justify-content: flex-end;
+}
+
+#logo { /* Logo positionné en haut à gauche */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12%;
+    margin: 4%;
+}
+
+
+.hamburger {/* Le hamburger qui apparait lorsqu'on est en mode mobile */
+    display: block;
+    width: 25px;
+    padding: 5%;
+    border-radius: 10px;
+    margin: 2%;
+    color: var(--black);
+}
+
+.hamburger-line, .hamburger-line-end { /* Les lignes du dessin hamburger séparés d'un margin-bottom */
+    border-top-style: solid;
+    margin-bottom: 6px;
+    width: 25px; 
+}
+
+.hamburger-line-end { /* La dernière ligne des hamburger ne doit pas avoir de marge pour respecter la forme carrée */
+    margin-bottom: 0px; 
+}
+
+.container-mobile {
+    width: 85%;
+    margin: auto;
+}
+
+
+.section p {
+    margin-top: 2px;
+    margin-bottom: 15%;
+    font-size: 0.8em;
+}
+
+.section img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+
+.btn {
+    width: 100%;
+    border: var(--black) solid 1px;
+    display: block;
+    padding: 5% 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    color: var(--black);
+    font-size: 0.9em;
+}
+
+.section4 {
+    padding: 25% 0;
+}
+.news {
+    padding: 5%;
+    background-color: var(--gray);
+    border-radius: 4px;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+
+.news p {
+    font-family: var(--font-title);
+    margin: 0;
+}
+
+.news p:first-child {
+    margin-top : 10%
+}
+
+.news p:last-child {
+    margin-bottom: 10%;
+}
+
+.btn2 {
+    background-color: var(--black);
+    color : var(--white);
+    font-size: 0.5em;
+    margin-top: 8%;
+}
+
+.flexible-pc {
+    display: block;
+}
+
+.flexible-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons {
+    width: 10%;
+    border: var(--gray) solid 1px;
+    padding: 3% 10%;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+
+.img-mobile {
+    display: block;
+}
+
+.img-pc{
+    display: none;
+}
+
+.nav {
+    display: none;
+}
+
+#licorne {
+    margin-bottom: 30%;
+}
+
+@media (min-width : 1024px) {
+    .container-mobile {
+        width: unset;
+        margin: unset;
+    }
+   
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+
+   
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        list-style: none;
+        display: flex;
+        gap : 50px;
+        padding : 5% 0;
+    }
+
+    .nav li a {
+        text-decoration: none;
+        color: var(--black);
+        
+    }
+    #logo {
+        width: unset;
+        margin: unset;
+        position: block;
+        top: unset;
+        left: unset;
+    }
+
+    .section1 {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        text-align: center;
+    }
+    
+    .section1 h1 {
+        font-size: 2.5em;
+        padding: 0 10%;
+        margin-bottom: 2%;
+    }
+    .section1 p {
+        font-size: 0.8em;
+    }
+
+    #licorne {
+        padding-top: 6%;
+        padding-bottom: 5%;
+        width: 50%;
+        margin-bottom: 10%;
+    }
+
+    .section img {
+        border-radius: 3px;
+    }
+    .section {
+        text-align: center;
+    }
+
+    .contenu {
+        width: 23%;
+        text-align: left;
+        transform: translateY(-125%) translateX(10%);
+        margin-bottom: 3%!important;
+        font-weight: bold;
+    }
+    .img-mobile{
+        display: none;
+    }
+    .img-pc{
+        display: block;
+    }
+    #read {
+        display: none;
+    }
+
+    .section4 {
+        padding: 0;
+    }
+
+    .flexible-mobile {
+        display: unset;
+    }
+    
+    .flexible-pc {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+   .news-left {
+        width: 50%;
+    }
+    #licorne-news {
+        width: 100%;
+    }
+
+    .btn2 {
+        margin-top: 15%;
+        font-size: 0.4em;
+        margin-top: 15%;
+    }
+
+    .btn {
+        width: 60%;
+        padding: 5% 0;
+
+    }
+
+    .news {
+        padding-bottom: 4%;
+        padding-top : 4%;
+        padding-left: 0%;
+        padding-right: 0%;
+        text-align: left;
+    }
+
+    .flexible-icons {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .icons {
+        width: 3%;
+        border: none;
+        padding: 3% 2%;
+        margin-top: 0;
+    }
+}
